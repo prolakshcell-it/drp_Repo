@@ -845,70 +845,147 @@ html, body {
 /* ==========================================================================
    Responsive Queries (Mobile & Tablet Styling)
    ========================================================================== */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+    .report-container {
+        padding: 32px 16px;
+        gap: 36px;
+    }
     .report-sheet {
-        padding: 36px;
+        padding: 36px 28px;
         min-height: auto; /* Fluid sheet heights on non-desktop viewports */
+    }
+}
+
+@media (max-width: 768px) {
+    .report-container {
+        padding: 24px 12px;
+        gap: 28px;
+    }
+    .report-sheet {
+        padding: 32px 20px;
+    }
+    .progress-details-grid {
+        gap: 20px;
+    }
+    .info-bar-top, .info-bar-bottom {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 576px) {
+    .report-container {
+        padding: 12px 8px;
+        gap: 20px;
+    }
+    .report-sheet {
+        padding: 24px 16px;
+        border-radius: var(--radius-md);
     }
     .report-header {
         flex-direction: column;
-        gap: 18px;
-        align-items: flex-start;
+        gap: 16px;
+        align-items: center;
+        text-align: center;
+        padding-bottom: 18px;
+        margin-bottom: 18px;
     }
     .header-title-area {
         width: 100%;
         border-top: 1.5px solid var(--border);
-        padding-top: 18px;
-        justify-content: flex-start;
-    }
-}
-
-@media (max-width: 600px) {
-    .report-container {
-        padding: 16px 12px;
-        gap: 24px;
-    }
-    .report-sheet {
-        padding: 24px 18px;
+        padding-top: 16px;
+        justify-content: center;
     }
     .info-bar {
-        padding: 20px;
+        padding: 20px 16px;
+        margin-bottom: 20px;
     }
     .info-bar-top {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         gap: 12px;
+        padding-bottom: 12px;
+        margin-bottom: 12px;
+    }
+    .info-user {
+        justify-content: center;
     }
     .info-date {
         width: 100%;
         box-sizing: border-box;
-        justify-content: flex-start;
+        justify-content: center;
     }
     .info-bar-bottom {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         gap: 12px;
     }
+    .project-info {
+        justify-content: center;
+    }
     .job-badge {
-        align-self: flex-start;
+        align-self: center;
+    }
+    .report-section {
+        padding: 20px 16px;
+        margin-bottom: 20px;
     }
     .metrics-grid {
-        grid-template-columns: 1fr; /* Metrics stack vertically on small screens */
+        grid-template-columns: 1fr;
         gap: 12px;
     }
     .gallery-grid {
-        grid-template-columns: 1fr; /* Gallery images stack in a single column */
+        grid-template-columns: 1fr;
         gap: 16px;
     }
     .progress-details-grid {
         grid-template-columns: 1fr;
         gap: 16px;
     }
+    .progress-container {
+        padding: 16px;
+    }
     .report-footer {
         flex-direction: column;
         gap: 12px;
         text-align: center;
         align-items: center;
+        padding-top: 18px;
+    }
+}
+
+@media (max-width: 400px) {
+    .report-container {
+        padding: 8px 4px;
+        gap: 16px;
+    }
+    .report-sheet {
+        padding: 16px 12px;
+    }
+    .info-bar {
+        padding: 16px 12px;
+    }
+    .info-user {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+    .project-info {
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+    }
+    .logo-text {
+        font-size: 20px;
+    }
+    .header-title-area h1 {
+        font-size: 18px;
+    }
+    .user-name {
+        font-size: 14px;
+    }
+    .project-name {
+        font-size: 13px;
+        text-align: center;
     }
 }
 

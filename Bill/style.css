@@ -1,8 +1,3 @@
-/* 
-  Prolaksh Energy Solutions Pvt. Ltd. - Tax Invoice Stylesheet
-  Design System for Production-Quality, Print-Friendly Tax Invoice
-*/
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap');
 
 :root {
@@ -15,7 +10,7 @@
   --text-muted: #64748b;
   --border-color: #cbd5e1;
   --border-light: #e2e8f0;
-  
+
   --font-title: 'Outfit', 'Inter', sans-serif;
   --font-body: 'Inter', sans-serif;
 }
@@ -28,6 +23,7 @@ body {
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 /* Floating Export Control Panel */
@@ -61,7 +57,8 @@ body {
   transition: all 0.2s ease;
 }
 
-.btn-export:hover, .btn-export:focus {
+.btn-export:hover,
+.btn-export:focus {
   background-color: var(--primary-hover);
   color: #fff;
   border-color: var(--primary-hover);
@@ -116,13 +113,15 @@ body {
   margin-top: 2px;
 }
 
-.company-info, .registration-info {
+.company-info,
+.registration-info {
   font-size: 9.5px;
   line-height: 1.35;
   color: var(--text-dark);
 }
 
-.company-info span, .registration-info span {
+.company-info span,
+.registration-info span {
   color: var(--text-muted);
 }
 
@@ -443,7 +442,8 @@ body {
 }
 
 /* Terms & Warranty columns */
-.tc-title, .warranty-title {
+.tc-title,
+.warranty-title {
   font-family: var(--font-title);
   font-weight: 700;
   font-size: 9.5px;
@@ -453,7 +453,8 @@ body {
   letter-spacing: 0.3px;
 }
 
-.tc-list, .warranty-list {
+.tc-list,
+.warranty-list {
   padding-left: 12px;
   margin-bottom: 0;
   font-size: 8px;
@@ -461,7 +462,8 @@ body {
   color: var(--text-dark);
 }
 
-.tc-list li, .warranty-list li {
+.tc-list li,
+.warranty-list li {
   margin-bottom: 2px;
 }
 
@@ -523,7 +525,8 @@ body {
   background-color: var(--primary-color);
   color: #ffffff;
   padding: 8px 15mm;
-  margin: 15mm -15mm -15mm -15mm; /* span edge-to-edge of container padding */
+  margin: 15mm -15mm -15mm -15mm;
+  /* span edge-to-edge of container padding */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -543,7 +546,8 @@ body {
   font-family: var(--font-title);
   font-weight: 700;
   letter-spacing: 0.3px;
-  color: #a3e635; /* bright lime green accents */
+  color: #a3e635;
+  /* bright lime green accents */
 }
 
 /* Tasteful CSS Fallbacks for Missing Images */
@@ -565,28 +569,58 @@ body {
   padding: 5px 15px;
   min-width: 140px;
 }
-.logo-fallback i { font-size: 18px; color: var(--accent-color); margin-bottom: 2px;}
-.logo-fallback span { font-family: var(--font-title); font-size: 11px; font-weight: 700; color: var(--primary-color); }
+
+.logo-fallback i {
+  font-size: 18px;
+  color: var(--accent-color);
+  margin-bottom: 2px;
+}
+
+.logo-fallback span {
+  font-family: var(--font-title);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--primary-color);
+}
 
 .solar-fallback {
   height: 100%;
   width: 100%;
 }
-.solar-fallback i { font-size: 32px; color: var(--accent-color); margin-bottom: 6px; }
-.solar-fallback span { font-family: var(--font-title); font-size: 12px; font-weight: 600; }
+
+.solar-fallback i {
+  font-size: 32px;
+  color: var(--accent-color);
+  margin-bottom: 6px;
+}
+
+.solar-fallback span {
+  font-family: var(--font-title);
+  font-size: 12px;
+  font-weight: 600;
+}
 
 .qr-fallback {
   width: 60px;
   height: 60px;
 }
-.qr-fallback i { font-size: 24px; color: var(--primary-color); }
+
+.qr-fallback i {
+  font-size: 24px;
+  color: var(--primary-color);
+}
 
 .sig-fallback {
   height: 38px;
   width: 120px;
   border: 1px dashed #cbd5e1;
 }
-.sig-fallback span { font-size: 9px; color: #94a3b8; font-style: italic; }
+
+.sig-fallback span {
+  font-size: 9px;
+  color: #94a3b8;
+  font-style: italic;
+}
 
 .stamp-fallback {
   height: 52px;
@@ -595,17 +629,31 @@ body {
   border: 1px dashed rgba(220, 38, 38, 0.4);
   color: rgba(220, 38, 38, 0.6);
 }
-.stamp-fallback span { font-size: 7px; font-weight: 700; transform: rotate(-15deg); }
+
+.stamp-fallback span {
+  font-size: 7px;
+  font-weight: 700;
+  transform: rotate(-15deg);
+}
 
 /* Responsive adjustments */
+@media (min-width: 992px) {
+  .header-reg-col {
+    border-left: 1px solid var(--border-color);
+  }
+}
+
 @media (max-width: 991px) {
   .invoice-wrapper {
     padding: 20px 10px;
   }
   .invoice-sheet {
     width: 100%;
+    height: auto;
+    max-height: none;
     min-height: auto;
     padding: 10mm;
+    overflow: visible;
   }
   .invoice-footer {
     margin: 10mm -10mm -10mm -10mm;
@@ -618,24 +666,30 @@ body {
     font-size: 22px;
     margin-top: 10px;
   }
+
   .invoice-header-right {
     align-items: flex-start;
     margin-top: 15px;
   }
+
   .metadata-table {
     max-width: 100%;
   }
+
   .details-card {
     min-height: auto;
     margin-bottom: 15px;
   }
+
   .info-card {
     min-height: auto;
     margin-bottom: 15px;
   }
+
   .signature-section {
     min-height: 130px;
   }
+
   .amount-in-words-box {
     margin-bottom: 15px;
   }
@@ -645,6 +699,7 @@ body {
   .invoice-sheet {
     padding: 6mm;
   }
+
   .invoice-footer {
     margin: 6mm -6mm -6mm -6mm;
     padding: 8px 6mm;
@@ -652,11 +707,13 @@ body {
     gap: 5px;
     text-align: center;
   }
+
   .rupee-icon-circle {
     width: 24px;
     height: 24px;
     font-size: 12px;
   }
+
   .amount-words-text {
     font-size: 9.5px;
   }
@@ -674,7 +731,8 @@ body {
 
 .table-responsive-custom table {
   margin-bottom: 0;
-  min-width: 750px; /* Keep layout structured for invoice calculations */
+  min-width: 750px;
+  /* Keep layout structured for invoice calculations */
 }
 
 /* Page fade-in micro-animation */
@@ -688,6 +746,7 @@ body {
     opacity: 0;
     transform: translateY(10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -698,15 +757,18 @@ body {
    PRINT STYLES: Pure Document Focus
    ========================================== */
 @media print {
+
   /* Reset background and settings */
-  html, body {
+  html,
+  body {
     background-color: #ffffff !important;
     color: #000000 !important;
     font-size: 9.5pt;
     margin: 0 !important;
     padding: 0 !important;
     width: 210mm;
-    height: 297mm !important; /* Lock to exact A4 height */
+    height: 297mm !important;
+    /* Lock to exact A4 height */
     overflow: hidden !important;
   }
 
@@ -740,6 +802,37 @@ body {
     flex: 0 0 25% !important;
     width: 25% !important;
     max-width: 25% !important;
+  }
+
+  .header-logo-col {
+    flex: 0 0 41.666667% !important;
+    width: 41.666667% !important;
+    max-width: 41.666667% !important;
+  }
+
+  .header-reg-col {
+    flex: 0 0 33.333333% !important;
+    width: 33.333333% !important;
+    max-width: 33.333333% !important;
+    border-left: 1px solid var(--border-color) !important;
+  }
+
+  .header-meta-col {
+    flex: 0 0 25% !important;
+    width: 25% !important;
+    max-width: 25% !important;
+  }
+
+  .info-card-col {
+    flex: 0 0 33.333333% !important;
+    width: 33.333333% !important;
+    max-width: 33.333333% !important;
+  }
+
+  .tc-sig-col {
+    flex: 0 0 33.333333% !important;
+    width: 33.333333% !important;
+    max-width: 33.333333% !important;
   }
 
   /* Hide print buttons and extra canvas padding elements */
@@ -785,12 +878,15 @@ body {
   .invoice-sheet .mb-4 {
     margin-bottom: 12px !important;
   }
+
   .invoice-sheet .mb-3 {
     margin-bottom: 8px !important;
   }
+
   .invoice-sheet .mt-3 {
     margin-top: 5px !important;
   }
+
   .invoice-sheet .pb-3 {
     padding-bottom: 8px !important;
   }
@@ -845,7 +941,8 @@ body {
   .invoice-footer {
     background-color: #0f294a !important;
     color: #ffffff !important;
-    padding: 8px 10mm !important; /* Matches sheet padding */
+    padding: 8px 10mm !important;
+    /* Matches sheet padding */
     position: absolute !important;
     bottom: 0 !important;
     left: 0 !important;
